@@ -1,0 +1,2 @@
+- make resolution the whole screen
+- setting for changing paddle speed
