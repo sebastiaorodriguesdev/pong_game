@@ -31,7 +31,7 @@ while running:
     if game_state.state == "playing":
         for input_handler in input_handlers:
             input_handler.handle_input() #inside otherwise it will still move the paddles when not in game
-        run_game(paddles, ball, players)
+        run_game(paddles, ball, players, WIDTH)
         draw_objects(objectsToDraw, screen)
         render_game_score(screen, pygame.font.SysFont("Arial", 20), players)
         pygame.display.update()
