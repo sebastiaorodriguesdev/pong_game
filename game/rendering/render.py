@@ -1,4 +1,5 @@
 import pygame
+from config.constants_config import WIDTH, HEIGHT
 def draw_objects(objects, screen):
     screen.fill((0, 0, 0))
     for obj in objects:
@@ -20,5 +21,12 @@ def render_game_score(screen, font, players):
             player.draw(screen, initial_x, 10, font, (255, 255, 255))
             counter += 1
         
+def render_pause_overlay(screen):
+    font = pygame.font.SysFont("Arial", 40)
+    text = font.render("PAUSED", True, (255, 255, 255))
+    screen.blit(text, (
+        WIDTH // 2 - text.get_width() // 2,
+        HEIGHT // 2 - text.get_height() // 2
+    ))
             
         

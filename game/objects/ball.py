@@ -22,7 +22,7 @@ class Ball():
         self.y += self.velocity_y
         self.hitbox.x = self.x - self.radius
         self.hitbox.y = self.y - self.radius
-        if self.x < 0 or self.x > 800:
+        if self.hitbox.x < 0 or self.hitbox.x + self.radius > 800:
             self.velocity_x *= -1
         if self.y < 0 or self.y > 600:
             self.velocity_y *= -1
